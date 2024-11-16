@@ -1,0 +1,534 @@
+/* styles.css */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Initially hide sections */
+.hidden {
+    opacity: 0;
+    transform: translateY(50px); /* Adjust this value to control how far the element moves */
+    transition: opacity 0.20s ease-out, transform 0.20s ease-out;
+}
+
+/* Visible state */
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.navbar {
+    background-color: rgb(1, 19, 45);
+    padding: 30px 40px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between; /* Space between left and right sections */
+    align-items: center; /* Vertically center the content */
+}
+
+.nav-left, .nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    border-radius: 3px;
+    transition: background-color 0.3s ease, padding 0.3s ease;
+}
+
+.nav-number {
+    color: #66FFCC;
+    font-weight: normal;
+    margin-right: 5px;
+}
+
+.nav-text {
+    color: #fff;
+}
+
+.nav-links a:hover {
+    background-color: #2880a8;
+    border-radius: 4px;
+    padding: 6px 12px;
+}
+
+.nav-right {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.social-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.nav-right a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+
+.content {
+    padding-top: 140px;
+    padding-left: 210px; /* Adjust if necessary to ensure space below navbar */
+}
+
+.intro {
+    font-size: 18px; /* Small font size */
+    margin: 0;
+    color: #66FFCC;
+    font-family: monospace;
+}
+
+.name {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #bdd6eb;
+    font-size: 90px;
+}
+h1 {
+    margin: 5px 0;
+
+}
+
+.h1-spacing{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+    color: #74708e; 
+    font-size: 30px; 
+    margin-bottom: 30px;
+}
+
+p {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;;
+    color: #74708e;
+    margin: 1px 0; /* Reduce margin between paragraphs */
+    line-height: 1.4; /* Adjust line height for readability */
+    font-size: 16px;
+}
+
+.contact-button {
+    display: inline-flex;
+    align-items: center;
+    background-color: transparent;  /* Button background color */
+    border: 1px solid #66FFCC;  
+    color: #66FFCC;                /* Text color */
+    padding: 20px 20px;         /* Padding inside the button */
+    border-radius: 5px;         /* Rounded corners */
+    border-color: #66FFCC;
+    text-decoration: none;      /* Remove underline from the link */
+    font-size: 16px;            /* Font size */
+    margin-top: 20px;           /* Space from the previous content */
+    transition: background-color 0.3s ease;  /* Smooth background transition on hover */
+}
+
+.contact-button:hover {
+    background-color: #9cc7da;  /* Lighter background color on hover */
+}
+
+.mail-icon {
+    width: 20px;   /* Adjust the size of the icon */
+    height: 20px;  /* Adjust the size of the icon */
+    margin-right: 10px;  /* Space between the icon and text */
+}
+
+
+.about-section {
+    display: flex;
+    color: #bdd6eb;
+    font-size: 20px;
+}
+
+.about-section .left-column {
+    flex: 1;
+    padding-left: 50px;
+}
+
+.section-heading {
+    padding-left: 10px; /* Adjust to move the heading further right */
+    margin-bottom: 30px;
+    font-size: 30px;
+    color: #ffffff;
+}
+
+.right-column {
+    display: none; /* Hide the right column */
+}
+
+.about-section p{
+    line-height: 1.8;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.skills-container {
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.skills-container h4{
+    color: #bdb9df;
+    font-family: monospace;
+}
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+    width: 48%; /* Each list takes up almost half the container width */
+}
+
+.skills-list li {
+    display: flex;
+    align-items: center;
+    color: #d3d5eb;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.skills-list li::before {
+    content: "▹"; /* Right arrow symbol */
+    color: #66FFCC;
+    margin-right: 10px; /* Space between the arrow and the text */
+}
+
+
+
+
+
+
+/* Add this to your CSS file */
+.about-section, .experience-section {
+    padding-right: calc(4 * 4ch); /* Adds padding equivalent to 4 tab spaces (1 tab = 4 spaces) */
+    padding-left: 210px; /* Keeping the existing left padding */
+}
+
+
+
+/* Experience section styling */
+.experience-container {
+    display: flex;
+    align-items: flex-start;
+}
+
+.experience-titles {
+    width: 40%;
+    padding: 20px;
+    font-family: monospace;
+    line-height: 4.8;
+}
+
+.experience-title-btn {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 2.5;
+    display: block;
+    background: none;
+    color: #bdd6eb;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: left;
+    border: none;
+    padding: 10px 0;
+    transition: color 0.3s;
+}
+
+.experience-title-btn:hover, .experience-title-btn.active {
+    color: #66FFCC;
+}
+
+.experience-descriptions {
+    width: 70%;
+    padding: 20px;
+    font-size: 18px;
+}
+
+.experience-description h1 {
+    color: #bdb9df;
+    font-size: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 2.3; /* Adjust the value as needed */
+    margin-bottom: 10px; /* Optional: Adds space between paragraphs */
+}
+
+/* Add space between lines of text */
+.experience-description p {
+    line-height: 1.8; /* Adjust the value as needed */
+    margin-bottom: 10px; /* Optional: Adds space between paragraphs */
+    position: relative; /* Required for the ::before pseudo-element */
+    margin-left: 20px; /* Add space to the left to accommodate the bullet */
+    color: #d3d5eb; /* Text color */
+}
+
+.experience-description p::before {
+    content: "▹"; /* The bullet symbol */
+    color: #66FFCC; /* Color of the bullet */
+    position: absolute;
+    left: -20px; /* Position the bullet to the left of the paragraph */
+    top: 0; /* Align the bullet with the first line of text */
+}
+
+
+.experience-description {
+    display: none; /* Hidden by default */
+}
+
+.experience-description.active {
+    display: block; /* Show the active description */
+}
+
+
+    
+.about-section p, .experience-section p {
+    margin-right: 0; /* Ensure no additional margin is added to the right */
+    color: #d3d5eb; /* Keep the existing text color */
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Reduced min width */
+    gap: 20px; /* Spacing between the cards */
+    padding: 20px; /* General padding */
+    padding-right: 160px; /* Extra padding on the right to create space at end */
+    box-sizing: border-box; /* Ensures padding does not affect card width */
+}
+
+
+.project-card {
+    position: relative;
+    background-color: rgb(5, 29, 62); /* Transparent bounding box */
+    border-radius: 10px;
+    padding: 20px;
+    width: 85%; /* Full width in the container */
+    margin: 10px auto; /* Center cards with spacing */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+/* This class specifically targets the icons to make sure they are visible from the start */
+.card-icons {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 10px;
+    opacity: 1; /* Ensure icons are fully visible */
+    visibility: visible; /* Make icons visible from the start */
+}
+
+.card-icons img {
+    width: 24px;  
+    height: 24px;
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Optional: add hover effect for scaling */
+}
+
+/* Optional: Add a scaling effect on hover if needed */
+.card-icons img:hover {
+    transform: scale(1.1);
+}
+.project-card h3 {
+    color: #bdb9df;
+    font-family: monospace;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.project-card h4 {
+    color: #d3d5eb;
+    font-family: monospace;
+    margin-bottom: 10px;
+    
+    font-size: 15px;
+}
+
+.project-card p {
+    color: #d3d5eb;
+    line-height: 1.7;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.project-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: transparent; /* Example color */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.project-link:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Darken on hover */
+}
+
+.section-heading {
+    display: flex;
+    align-items: center;
+}
+
+.section-border {
+    width: 600px; /* Set the desired width for the border */
+    height: 1px;
+    background-color: #bdd6eb;
+    margin-left: 15px; /* Space between text and border */
+    margin-right: 20px; /* Padding-right 10px */
+}
+
+/* Copyright Section Styling */
+.copyright {
+    text-align: center;
+    padding-top: 100px;
+    font-size: 14px;
+    color: #74708e;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+
+  /* Styles for tablets and smaller devices */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack the navbar items vertically */
+        padding: 15px 20px;
+    }
+
+    .nav-links {
+        flex-direction: column; /* Stack navigation links vertically */
+        gap: 10px;
+    }
+
+    .nav-links li {
+        margin-left: 0; /* Remove horizontal spacing for mobile */
+    }
+
+    .content {
+        padding: 100px 20px; /* Reduce padding for smaller screens */
+    }
+
+    .about-section {
+        flex-direction: column; /* Stack the columns vertically */
+        padding-left: 20px; /* Reduce left padding for mobile */
+        padding-right: 20px; /* Add consistent right padding */
+    }
+
+    .skills-container {
+        flex-direction: column; /* Stack skills vertically */
+        gap: 20px; /* Adjust spacing */
+    }
+
+    .skills-list {
+        width: 100%; /* Take full width on smaller devices */
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust grid for smaller screens */
+        padding-right: 20px; /* Reduce padding */
+        padding-left: 20px;
+    }
+
+    
+    .project-card {
+        width: 90%; /* Slightly smaller than container */
+        aspect-ratio: 4 / 3; /* Maintain consistent width-to-height ratio */
+        max-height: auto; /* Allow height to adjust */
+    }
+    
+        .project-card p {
+            font-size: 14px; /* Uniform font size for <p> */
+            line-height: 1.5; /* Adjust line spacing for readability */
+        }
+    
+    .experience-container {
+        flex-direction: column; /* Stack the experience titles and descriptions vertically */
+    }
+
+    .experience-titles {
+        width: 100%;
+    }
+
+    .experience-descriptions {
+        width: 100%;
+        font-size: 16px;
+    }
+
+}
+
+/* Styles for phones */
+@media (max-width: 480px) {
+    .navbar {
+        padding: 10px;
+    }
+
+    .name {
+        font-size: 50px; /* Scale down the name font size */
+    }
+
+    .h1-spacing {
+        font-size: 18px; /* Adjust smaller font for headings */
+    }
+
+    .skills-container {
+        gap: 10px; /* Reduce gap for smaller screens */
+    }
+
+    .project-card {
+        width: 95%; /* Slightly narrower for small screens */
+        aspect-ratio: 4 / 3; /* Force consistent dimensions */
+        max-height: auto; /* Allow height to adjust */
+        margin: 10px auto; /* Keep consistent spacing */
+    }
+    .project-card p {
+        font-size: 12px; /* Ensure consistent font size */
+        line-height: 1.4; /* Adjust line spacing */
+    }
+
+    .section-border {
+        width: 100%; /* Make the border adjust to the screen size */
+    }
+
+    .contact-button {
+        font-size: 14px; /* Smaller text size */
+        padding: 10px 15px; /* Adjust padding */
+    }
+
+    .copyright {
+        padding-top: 50px;
+        font-size: 12px; /* Smaller font for copyright text */
+    }
+}
